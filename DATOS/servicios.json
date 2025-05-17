@@ -1,0 +1,8 @@
+[
+  { "id": 1, "nombre": "Clínica Integral", "precio": 3500 },
+  { "id": 2, "nombre": "Internación", "precio": 5000 },
+  { "id": 3, "nombre": "Laboratorio", "precio": 2000 },
+  { "id": 4, "nombre": "Cirugías", "precio": 7500 },
+  { "id": 5, "nombre": "Domicilios", "precio": 1500 },
+  { "id": 6, "nombre": "Plan Sanitario", "precio": 4000 }
+]

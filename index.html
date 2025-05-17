@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Veterinaria City Bell</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Fuentes Google -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <!-- JS defer -->
+    <script defer src="./js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+  </head>
+  <body>
+    <header class="container mb-5 text-center">
+      <h1>Veterinaria City Bell</h1>
+      <p class="lead">Simulador Interactivo de Turnos y Compras</p>
+    </header>
+
+    <main class="container">
+      <!-- SECCIÓN RESERVA DE TURNOS -->
+      <section id="turnos" class="bg-light rounded-3 p-4 mb-5 shadow-sm">
+        <h2>Reserva tu Turno</h2>
+        <form id="formTurnos" novalidate>
+          <div class="mb-3">
+            <label for="nombreCliente" class="form-label"
+              >Nombre Completo</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="nombreCliente"
+              name="nombreCliente"
+              required
+              placeholder="Tu nombre"
+            />
+            <div class="invalid-feedback">Por favor ingresa tu nombre.</div>
+          </div>
+          <div class="mb-3">
+            <label for="telefonoCliente" class="form-label">Teléfono</label>
+            <input
+              type="tel"
+              class="form-control"
+              id="telefonoCliente"
+              name="telefonoCliente"
+              required
+              pattern="^\d{7,15}$"
+              placeholder="Ej: 1122334455"
+            />
+            <div class="invalid-feedback">
+              Por favor ingresa un teléfono válido (solo números, mínimo 7
+              dígitos).
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="fechaTurno" class="form-label">Fecha del turno</label>
+            <input
+              type="date"
+              class="form-control"
+              id="fechaTurno"
+              name="fechaTurno"
+              required
+              min=""
+            />
+            <div class="invalid-feedback">
+              Por favor selecciona una fecha válida.
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="servicioTurno" class="form-label">Servicio</label>
+            <select
+              class="form-select"
+              id="servicioTurno"
+              name="servicioTurno"
+              required
+            >
+              <option value="" selected disabled>Selecciona un servicio</option>
+              <!-- Las opciones se cargarán dinámicamente desde servicios.json -->
+            </select>
+            <div class="invalid-feedback">Debes seleccionar un servicio.</div>
+          </div>
+          <button type="submit" class="btn btn-primary">Reservar Turno</button>
+        </form>
+
+        <div id="turnosLista" class="mt-4">
+          <h3>Turnos Reservados</h3>
+          <ul class="list-group" id="listaTurnos">
+            <!-- Aquí se cargarán los turnos -->
+          </ul>
+        </div>
+      </section>
+
+      <!-- SECCIÓN PRODUCTOS (E-COMMERCE) -->
+      <section id="productos" class="bg-light rounded-3 p-4 mb-5 shadow-sm">
+        <h2>Productos para tu Mascota</h2>
+        <div id="listadoProductos" class="row">
+          <!-- Los productos se cargarán desde JS -->
+        </div>
+      </section>
+
+      <!-- SECCIÓN CARRITO DE COMPRAS -->
+      <section id="carrito" class="bg-light rounded-3 p-4 mb-5 shadow-sm">
+        <h2>Carrito de Compras</h2>
+        <div id="carritoItems" class="mb-3">
+          <!-- Items agregados -->
+        </div>
+        <div class="d-flex justify-content-between align-items-center">
+          <h4>Total: $<span id="totalCarrito">0</span></h4>
+          <button id="btnRealizarCompra" class="btn btn-primary" disabled>
+            Realizar Compra
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="text-center mt-5 mb-3 text-muted">
+      &copy; 2025 Veterinaria City Bell. Todos los derechos reservados.
+    </footer>
+
+    <!-- Bootstrap JS Bundle con Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

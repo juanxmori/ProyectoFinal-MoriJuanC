@@ -1,0 +1,188 @@
+/* Paleta principal */
+:root {
+  --violeta-agua: #8a7ca8;
+  --camel: #c59d5f;
+  --camel-claro: #e6d4a7;
+  --gris-claro: #f7f7f7;
+  --gris-medio: #555555;
+  --gris-oscuro: #222222;
+}
+
+/* Reset básico y fuentes */
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--gris-claro);
+  color: var(--gris-oscuro);
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  color: var(--violeta-agua);
+  margin-bottom: 1rem;
+}
+
+/* Header */
+header {
+  background-color: var(
+    --violeta-agua
+  ); /* Se cambió el fondo para que el h1 se vea */
+  padding: 2rem 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  color: #f7f7f7;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+header p.lead {
+  color: #f7f7f7;
+  font-weight: 500;
+}
+
+/* Secciones */
+section {
+  background-color: white;
+  border: 2px solid var(--camel);
+  box-shadow: 0 0 10px rgba(197, 157, 95, 0.3);
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+/* Formularios */
+form label {
+  font-weight: 600;
+  color: var(--gris-medio);
+}
+
+form input,
+form select {
+  border: 1.5px solid var(--camel);
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  transition: border-color 0.3s ease;
+}
+
+form input:focus,
+form select:focus {
+  outline: none;
+  border-color: var(--violeta-agua);
+  box-shadow: 0 0 5px var(--violeta-agua);
+}
+
+.invalid-feedback {
+  font-size: 0.85rem;
+  color: #dc3545;
+}
+
+/* Botones */
+.btn-primary {
+  background-color: var(--camel);
+  border-color: var(--camel);
+  font-weight: 700;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--violeta-agua);
+  border-color: var(--violeta-agua);
+  color: white;
+}
+
+/* Listados */
+#listaTurnos,
+#carritoItems {
+  max-height: 250px;
+  overflow-y: auto;
+  border: 1px solid var(--camel);
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: var(--gris-claro);
+}
+
+.list-group-item {
+  border: none;
+  padding-left: 0;
+  padding-right: 0;
+  color: var(--gris-oscuro);
+  font-weight: 500;
+}
+
+/* Productos - Cards */
+#listadoProductos .col {
+  margin-bottom: 1.5rem;
+}
+
+#listadoProductos .card {
+  border: 1.5px solid var(--camel);
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#listadoProductos .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(138, 124, 168, 0.3);
+}
+
+#listadoProductos .card-img-top {
+  height: 200px;
+  object-fit: contain;
+  width: 100%;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 10px 10px 0 0;
+  border-bottom: 1.5px solid var(--camel);
+}
+
+.card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-body h5 {
+  color: var(--violeta-agua);
+  font-weight: 700;
+}
+
+.card-body p {
+  color: var(--gris-medio);
+}
+
+/* Footer */
+footer {
+  font-size: 0.9rem;
+  color: var(--gris-medio);
+}
+
+/* Scrollbars personalizados (solo para webkit) */
+#listaTurnos::-webkit-scrollbar,
+#carritoItems::-webkit-scrollbar {
+  width: 8px;
+}
+
+#listaTurnos::-webkit-scrollbar-thumb,
+#carritoItems::-webkit-scrollbar-thumb {
+  background-color: var(--camel);
+  border-radius: 4px;
+}
+
+#listaTurnos::-webkit-scrollbar-track,
+#carritoItems::-webkit-scrollbar-track {
+  background-color: var(--gris-claro);
+}

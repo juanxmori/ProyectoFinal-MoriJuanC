@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "nombre": "Alimento Balanceado Premium",
+    "precio": 1500,
+    "imagen": "img/alimento1.jpg"
+  },
+  {
+    "id": 2,
+    "nombre": "Alimento Balanceado Light",
+    "precio": 1300,
+    "imagen": "img/alimento2.jpg"
+  },
+  {
+    "id": 3,
+    "nombre": "Juguete para perros",
+    "precio": 450,
+    "imagen": "img/juguete1.jpg"
+  },
+  {
+    "id": 4,
+    "nombre": "Collar ajustable",
+    "precio": 800,
+    "imagen": "img/collar1.jpg"
+  }
+]
